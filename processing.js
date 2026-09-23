@@ -15,3 +15,4 @@ function drawingGrid(number) {
     }
 }
 
+drawingGrid(16);
