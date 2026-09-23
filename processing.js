@@ -8,11 +8,17 @@ function drawingGrid(number) {
             const square = document.createElement('div');
             square.style.width = squareDimension;
             square.style.height = squareDimension;
-            square.setAttribute('class', 'square')
+            square.setAttribute('class', 'square');
+            square.addEventListener('mouseover', (event) => {
+                const r = Math.floor(Math.random() * 256);
+                const g = Math.floor(Math.random() * 256);
+                const b = Math.floor(Math.random() * 256);
+                event.target.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+            });
             row.appendChild(square);
         }
         sketchPad.appendChild(row);
     }
 }
 
-drawingGrid(16);
+drawingGrid(36);
