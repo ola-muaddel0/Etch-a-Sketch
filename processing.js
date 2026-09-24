@@ -1,7 +1,7 @@
 const sketchPad = document.querySelector('.grid');
 function drawingGrid(number) {
     for (let i = 1; i <= number; i++) {
-        const squareDimension = (1000 / number) - 4 + "px";
+        const squareDimension = (960 / number) + "px";
         const row = document.createElement('div');
         row.setAttribute('class', 'row');
         for (let j = 1; j <= number; j++) {
@@ -21,4 +21,4 @@ function drawingGrid(number) {
     }
 }
 
-drawingGrid(36);
+drawingGrid(16);
