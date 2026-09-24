@@ -12,12 +12,9 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    background-color:#525b91 ;
-    gap: 2px;
 }
 .row {
     display: flex;
-    gap: 2px;
 }
 .square {
     background-color: aliceblue;
