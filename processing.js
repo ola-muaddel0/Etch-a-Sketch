@@ -21,9 +21,8 @@ selectNumBtn.addEventListener('click', () => {
 document.body.insertBefore(selectNumBtn, sketchPad);
 
 function drawingGrid(number) {
+    const squareDimension = (960 / number) + "px";
     for (let i = 1; i <= number; i++) {
-
-        const squareDimension = (960 / number) + "px";
 
         const row = document.createElement('div');
         row.setAttribute('class', 'row');
