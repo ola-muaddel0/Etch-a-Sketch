@@ -1,14 +1,21 @@
 const sketchPad = document.querySelector('.grid');
 
 const selectNumBtn = document.createElement('button');
-selectNumBtn.textContent= 'Select A Number';
+selectNumBtn.textContent = 'Select A Number';
 selectNumBtn.setAttribute('class', 'select-number');
+selectNumBtn.addEventListener('click', () => {
+    let number = parseInt(prompt("enter the grid dimansion (maximum is 100)"));
+    if (number > 100) {
+        return;
+    }
+    drawingGrid(number);
+});
 
 document.body.insertBefore(selectNumBtn, sketchPad);
 
 function drawingGrid(number) {
     for (let i = 1; i <= number; i++) {
-    
+
         const squareDimension = (450 / number) + "px";
 
         const row = document.createElement('div');
