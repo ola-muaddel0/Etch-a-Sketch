@@ -5,7 +5,7 @@ selectNumBtn.textContent = 'Select A Number';
 selectNumBtn.setAttribute('class', 'select-number');
 selectNumBtn.addEventListener('click', () => {
     let number = parseInt(prompt("enter the grid dimansion (maximum is 100)"));
-    if (number == NaN || number > 100) {
+    if (isNaN(number) || number > 100) {
         return;
     }
     else {
