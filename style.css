@@ -6,16 +6,24 @@
 
 body {
     background-color: #030409;
+    padding: 32px 64px;
 }
-.grid{
+
+.grid {
     width: 960px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
 }
+
 .row {
     display: flex;
 }
+
 .square {
     background-color: aliceblue;
+    /*^_^ for a different styles
+     border-radius: 50%;
+     border-radius: 16px;
+    */
 }
