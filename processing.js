@@ -5,7 +5,7 @@ selectNumBtn.textContent = 'Select A Number';
 selectNumBtn.setAttribute('class', 'select-number');
 selectNumBtn.addEventListener('click', () => {
     let number = parseInt(prompt("enter the grid dimansion (maximum is 100)"));
-    console.log(number);
+  
     if (number > 100) {
         return;
     }
@@ -42,7 +42,7 @@ function drawingGrid(number) {
                 if (squareOpacity >= 0.1) {
                     event.target.style.opacity = '' + (squareOpacity - 0.1);
                 }
-                console.log(squareOpacity);
+            
             });
 
             row.appendChild(square);
