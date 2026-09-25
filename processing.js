@@ -12,6 +12,7 @@ selectNumBtn.addEventListener('click', () => {
     while (sketchPad.firstChild) {
         sketchPad.removeChild(sketchPad.firstChild);
     }
+
     drawingGrid(number);
 });
 
@@ -31,11 +32,17 @@ function drawingGrid(number) {
             square.style.width = squareDimension;
             square.style.height = squareDimension;
             square.setAttribute('class', 'square');
+            square.style.opacity = '1';
             square.addEventListener('mouseover', (event) => {
                 const r = Math.floor(Math.random() * 256);
                 const g = Math.floor(Math.random() * 256);
                 const b = Math.floor(Math.random() * 256);
                 event.target.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+                let squareOpacity = parseFloat(event.target.style.opacity);
+                if (squareOpacity >= 0.1) {
+                    event.target.style.opacity = '' + (squareOpacity - 0.1);
+                }
+                console.log(squareOpacity);
             });
 
             row.appendChild(square);
