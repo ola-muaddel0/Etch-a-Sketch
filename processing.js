@@ -5,15 +5,17 @@ selectNumBtn.textContent = 'Select A Number';
 selectNumBtn.setAttribute('class', 'select-number');
 selectNumBtn.addEventListener('click', () => {
     let number = parseInt(prompt("enter the grid dimansion (maximum is 100)"));
-  
-    if (number > 100) {
+    if (number == NaN || number > 100) {
         return;
     }
-    while (sketchPad.firstChild) {
-        sketchPad.removeChild(sketchPad.firstChild);
+    else {
+        while (sketchPad.firstChild) {
+            sketchPad.removeChild(sketchPad.firstChild);
+        }
+
+        drawingGrid(number);
     }
 
-    drawingGrid(number);
 });
 
 document.body.insertBefore(selectNumBtn, sketchPad);
@@ -42,7 +44,7 @@ function drawingGrid(number) {
                 if (squareOpacity >= 0.1) {
                     event.target.style.opacity = '' + (squareOpacity - 0.1);
                 }
-            
+
             });
 
             row.appendChild(square);
